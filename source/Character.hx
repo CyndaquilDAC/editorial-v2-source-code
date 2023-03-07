@@ -52,6 +52,9 @@ class Character extends FlxSprite
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = DEFAULT_CHARACTER;
 
+	public var canDance:Bool = true;
+	public var canSing:Bool = true;
+
 	public var colorTween:FlxTween;
 	public var holdTimer:Float = 0;
 	public var heyTimer:Float = 0;
@@ -320,7 +323,7 @@ class Character extends FlxSprite
 	 */
 	public function dance()
 	{
-		if (!debugMode && !skipDance && !specialAnim)
+		if (!debugMode && !skipDance && !specialAnim && canDance)
 		{
 			if(danceIdle)
 			{
@@ -339,6 +342,11 @@ class Character extends FlxSprite
 
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
+		if(!canSing && AnimName.startsWith('sing'))
+		{
+			return;
+		}
+		
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
 

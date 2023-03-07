@@ -325,6 +325,12 @@ class PlayState extends MusicBeatState
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
 
+	var tcmgBg:BGSprite;
+	var bgScroll:BGSprite;
+	var officeBg:BGSprite;
+	var cafeBg:BGSprite;
+	var outBg:BGSprite;
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -438,6 +444,8 @@ class PlayState extends MusicBeatState
 		if(SONG.stage == null || SONG.stage.length < 1) {
 			switch (songName)
 			{
+				case 'editorial':
+					curStage = 'tcmg';
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';
 				case 'pico' | 'blammed' | 'philly' | 'philly-nice':
@@ -509,6 +517,22 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'tcmg':
+				outBg = new BGSprite('editorial/hall_door', -615, -150, 1, 1);
+				outBg.antialiasing = false;
+				add(outBg);
+				cafeBg = new BGSprite('editorial/cafe', -615, -150, 1, 1);
+				cafeBg.antialiasing = false;
+				add(cafeBg);
+				officeBg = new BGSprite('editorial/office', -615, -150, 1, 1);
+				officeBg.antialiasing = false;
+				add(officeBg);
+				bgScroll = new BGSprite('editorial/tcmg_hall', -615, -150, 1, 1, ['idle'], true);
+				bgScroll.antialiasing = false;
+				add(bgScroll);
+				tcmgBg = new BGSprite('editorial/bg', -615, -150, 1, 1);
+				tcmgBg.antialiasing = false;
+				add(tcmgBg);
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -4961,6 +4985,8 @@ class PlayState extends MusicBeatState
 
 	var lastBeatHit:Int = -1;
 
+	var dadunce:FlxSprite;
+
 	override function beatHit()
 	{
 		super.beatHit();
@@ -4994,6 +5020,42 @@ class PlayState extends MusicBeatState
 			dad.dance();
 		}
 
+		switch(SONG.song.toLowerCase())
+		{
+			case 'editorial':
+				switch(curBeat)
+				{
+					case 40: 
+						dad.canDance = false;
+						dad.playAnim('talk', true);
+						dad.canSing = false;
+					case 72:
+						dad.canSing = true;
+						dad.canDance = true;
+					case 132:
+						defaultCamZoom += 0.15;
+					case 136:
+						defaultCamZoom -= 0.15;
+					case 316:
+						dad.canDance = false;
+						dad.playAnim('pullphone', true);
+						dad.canSing = false;
+					case 324:
+						dad.playAnim('usephone', true);
+					case 340:
+						dad.canDance = true;
+						dad.canSing = true;
+						dadunce = new FlxSprite(dad.x, dad.y);
+						dadunce.scale.set(2.2, 2.2);
+						dadunce.setPosition(dad.x, dad.y);
+						dadunce.antialiasing = false;
+						add(dadunce);
+						addBehindDad(dadunce);
+						dadGroup.remove(dad);
+						dad = new Character(200, 480, 'michael-cousin', false);
+						dadGroup.add(dad);
+				}
+		}
 		switch (curStage)
 		{
 			case 'tank':
