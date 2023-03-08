@@ -331,6 +331,9 @@ class PlayState extends MusicBeatState
 	var cafeBg:BGSprite;
 	var outBg:BGSprite;
 
+	var speedyPart:Bool;
+	var drivey:Character;
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -518,19 +521,20 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'tcmg':
-				outBg = new BGSprite('editorial/hall_door', -615, -150, 1, 1);
+				addCharacterToList('michael-cousin', 0);
+				outBg = new BGSprite('editorial/hall_door', -615, -125, 1, 1);
 				outBg.antialiasing = false;
 				add(outBg);
-				cafeBg = new BGSprite('editorial/cafe', -615, -150, 1, 1);
+				cafeBg = new BGSprite('editorial/cafe', -615, -125, 1, 1);
 				cafeBg.antialiasing = false;
 				add(cafeBg);
-				officeBg = new BGSprite('editorial/office', -615, -150, 1, 1);
+				officeBg = new BGSprite('editorial/office', -615, -125, 1, 1);
 				officeBg.antialiasing = false;
 				add(officeBg);
-				bgScroll = new BGSprite('editorial/tcmg_hall', -615, -150, 1, 1, ['idle'], true);
+				bgScroll = new BGSprite('editorial/tcmg_hall', -615, -125, 1, 1, ['idle'], true);
 				bgScroll.antialiasing = false;
 				add(bgScroll);
-				tcmgBg = new BGSprite('editorial/bg', -615, -150, 1, 1);
+				tcmgBg = new BGSprite('editorial/bg', -615, -125, 1, 1);
 				tcmgBg.antialiasing = false;
 				add(tcmgBg);
 			case 'stage': //Week 1
@@ -1039,7 +1043,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat('Comic Sans MS Bold', 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1058,7 +1062,6 @@ class PlayState extends MusicBeatState
 		timeBarBG.scrollFactor.set();
 		timeBarBG.alpha = 0;
 		timeBarBG.visible = showTime;
-		timeBarBG.color = FlxColor.BLACK;
 		timeBarBG.xAdd = -4;
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
@@ -1066,7 +1069,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFFFFFFFF, 0xFF000000);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -1157,14 +1160,14 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat('Comic Sans MS Bold', 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat('Comic Sans MS Bold', 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1187,11 +1190,6 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		// if (SONG.song == 'South')
-		// FlxG.camera.alpha = 0.7;
-		// UI_camera.zoom = 1;
-
-		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
 		
 		#if LUA_ALLOWED
@@ -4583,6 +4581,14 @@ class PlayState extends MusicBeatState
 			}
 
 			var char:Character = dad;
+			if(speedyPart)
+			{
+				if(SONG.notes[curSection].altAnim && drivey != null)
+				{
+					char = drivey;
+				}
+				altAnim = '';
+			}
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
 			if(note.gfNote) {
 				char = gf;
@@ -5019,6 +5025,13 @@ class PlayState extends MusicBeatState
 		{
 			dad.dance();
 		}
+		if(drivey != null)
+		{
+			if (curBeat % drivey.danceEveryNumBeats == 0 && drivey.animation.curAnim != null && !drivey.animation.curAnim.name.startsWith('sing') && !drivey.stunned)
+			{
+				drivey.dance();
+			}
+		}
 
 		switch(SONG.song.toLowerCase())
 		{
@@ -5045,15 +5058,69 @@ class PlayState extends MusicBeatState
 					case 340:
 						dad.canDance = true;
 						dad.canSing = true;
-						dadunce = new FlxSprite(dad.x, dad.y);
+						dadunce = new FlxSprite(dad.x, dad.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
 						dadunce.scale.set(2.2, 2.2);
-						dadunce.setPosition(dad.x, dad.y);
+						//dadunce.updateHitbox();
+						//dadunce.setPosition(dad.x, dad.y);
 						dadunce.antialiasing = false;
 						add(dadunce);
-						addBehindDad(dadunce);
 						dadGroup.remove(dad);
-						dad = new Character(200, 480, 'michael-cousin', false);
+						dad = new Character(-150, -80, 'michael-cousin', false);
 						dadGroup.add(dad);
+						addBehindDad(dadunce);
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 462:
+						dadGroup.remove(dad);
+						dad = new Character(dad.x, dad.y, 'michael-cousin-ang', false);
+						dadGroup.add(dad);
+						dad.canSing = false;
+						dad.canDance = false;
+						dad.playAnim('ang', true);
+					case 464:
+						dad.playAnim('ruler', true);
+					case 466:
+						dad.canSing = true;
+						dad.canDance = true;
+					case 664:
+						//this is where drive transition is
+					case 672:
+						speedyPart = true;
+						dadunce.visible = false;
+						tcmgBg.visible = false;
+						dadGroup.remove(dad);
+						dad = new Character(dad.x, dad.y, 'speedy', false);
+						dadGroup.add(dad);
+						drivey = new Character(dad.x, dad.y, 'gotta-drive');
+						add(drivey);
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 704:
+						FlxG.camera.flash();
+						drivey.canDance = false;
+						drivey.canSing = false;
+						drivey.playAnim('dancey', true);
+					case 832:
+						FlxG.camera.flash();
+						drivey.canDance = true;
+						drivey.canSing = true;
+						drivey.dance();
+					case 904:
+						dad.canDance = false;
+						dad.canSing = false;
+						dad.playAnim('fall', true);
+					case 912:
+						speedyPart = false;
+						dad.canDance = true;
+						dad.canSing = true;
+						dadGroup.remove(dad);
+						dad = new Character(drivey.x, drivey.y, 'gotta-drive', false);
+						dadGroup.add(dad);
+						drivey.visible = false;
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
 				}
 		}
 		switch (curStage)

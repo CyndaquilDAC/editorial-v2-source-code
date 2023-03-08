@@ -82,7 +82,7 @@ class Character extends FlxSprite
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false, ?doPositionShit:Bool = true)
 	{
 		super(x, y);
 
@@ -177,7 +177,10 @@ class Character extends FlxSprite
 					updateHitbox();
 				}
 
-				positionArray = json.position;
+				if(doPositionShit)
+				{
+					positionArray = json.position;
+				}
 				cameraPosition = json.camera_position;
 
 				healthIcon = json.healthicon;

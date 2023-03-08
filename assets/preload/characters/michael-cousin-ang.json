@@ -1,125 +1,125 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				368,
-				-33
-			],
 			"loop": false,
+			"offsets": [
+				114,
+				-48
+			],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "aleft",
-			"indices": []
+			"indices": [],
+			"name": "aleft"
 		},
 		{
-			"offsets": [
-				-47,
-				-4
-			],
 			"loop": false,
+			"offsets": [
+				83,
+				-124
+			],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "adown",
-			"indices": []
+			"indices": [],
+			"name": "adown"
 		},
 		{
-			"offsets": [
-				-28,
-				60
-			],
 			"loop": false,
+			"offsets": [
+				172,
+				337
+			],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "aup",
-			"indices": []
+			"indices": [],
+			"name": "aup"
 		},
 		{
-			"offsets": [
-				-148,
-				-43
-			],
 			"loop": false,
-			"anim": "singRIGHT",
+			"offsets": [
+				-168,
+				-15
+			],
 			"fps": 24,
-			"name": "aright",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "aright"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				84,
 				-68
 			],
-			"loop": false,
-			"anim": "singLEFT-alt",
 			"fps": 24,
-			"name": "kleft",
-			"indices": []
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "kleft"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				29,
 				-253
 			],
-			"loop": false,
-			"anim": "singDOWN-alt",
 			"fps": 24,
-			"name": "kdown",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "kdown"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-56,
 				11
 			],
-			"loop": false,
-			"anim": "singUP-alt",
 			"fps": 24,
-			"name": "kup",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "kup"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-65,
 				-49
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT-alt",
-			"fps": 24,
-			"name": "kright",
-			"indices": []
+			"indices": [],
+			"name": "kright"
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"anim": "idle",
+			"offsets": [
+				-126,
+				-19
+			],
 			"fps": 24,
-			"name": "aidle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "aidle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				83,
 				-25
 			],
-			"loop": false,
-			"anim": "ruler",
 			"fps": 24,
-			"name": "ruler",
-			"indices": []
+			"anim": "ruler",
+			"indices": [],
+			"name": "ruler"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-26,
 				4
 			],
-			"loop": false,
-			"anim": "ang",
 			"fps": 24,
-			"name": "ang",
-			"indices": []
+			"anim": "ang",
+			"indices": [],
+			"name": "ang"
 		}
 	],
 	"no_antialiasing": true,
