@@ -1,101 +1,90 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				145,
-				522
-			],
 			"loop": false,
+			"offsets": [
+				-29,
+				-2
+			],
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "LEFT",
-			"indices": []
+			"indices": [],
+			"name": "LEFT"
 		},
 		{
-			"offsets": [
-				-76,
-				524
-			],
 			"loop": false,
+			"offsets": [
+				0,
+				20
+			],
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "DOWN",
-			"indices": []
+			"indices": [],
+			"name": "DOWN"
 		},
 		{
-			"offsets": [
-				-80,
-				522
-			],
 			"loop": false,
+			"offsets": [
+				10,
+				-10
+			],
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "UP",
-			"indices": []
+			"indices": [],
+			"name": "UP"
 		},
 		{
-			"offsets": [
-				-80,
-				524
-			],
 			"loop": false,
+			"offsets": [
+				30,
+				0
+			],
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "RIGHT",
-			"indices": []
+			"indices": [],
+			"name": "RIGHT"
 		},
 		{
-			"offsets": [
-				-78,
-				524
-			],
 			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "IDLE",
-			"indices": []
+			"indices": [],
+			"name": "IDLE"
 		},
 		{
 			"offsets": [
-				-78,
-				524
+				-30,
+				-2
 			],
-			"loop": false,
-			"anim": "pullphone",
-			"fps": 12,
-			"name": "PHONESTART",
-			"indices": []
-		},
-		{
-			"offsets": [
-				-78,
-				526
-			],
-			"loop": false,
-			"anim": "usephone",
-			"fps": 12,
-			"name": "PHONEEND",
-			"indices": []
-		},
-		{
 			"loop": true,
-			"offsets": [
-				-79,
-				524
-			],
-			"anim": "talk",
 			"fps": 12,
-			"name": "TALK",
-			"indices": []
+			"anim": "talk",
+			"indices": [],
+			"name": "TALK"
+		},
+		{
+			"offsets": [
+				1080,
+				-190
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "fall",
+			"indices": [],
+			"name": "deafht :sob;"
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/editorial/tcmg",
+	"image": "characters/editorial/speedy",
 	"position": [
-		-180,
-		330
+		-160,
+		30
 	],
-	"healthicon": "tcmg",
+	"healthicon": "speedy",
 	"flip_x": false,
 	"healthbar_colors": [
 		45,
@@ -104,7 +93,7 @@
 	],
 	"camera_position": [
 		-170,
-		-630
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 2.2

@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "body",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/editorial/bf_run",
+	"position": [
+		-30,
+		40
+	],
+	"healthicon": "tcmgbf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		80,
+		20
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

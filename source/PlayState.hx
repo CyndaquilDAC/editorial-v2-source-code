@@ -330,9 +330,13 @@ class PlayState extends MusicBeatState
 	var officeBg:BGSprite;
 	var cafeBg:BGSprite;
 	var outBg:BGSprite;
+	var driveScenePrecache:BGSprite;
 
 	var speedyPart:Bool;
 	var drivey:Character;
+	var driveCutty:FlxSprite;
+
+	var boyfriendBackBod:Boyfriend;
 
 	override public function create()
 	{
@@ -522,6 +526,12 @@ class PlayState extends MusicBeatState
 		{
 			case 'tcmg':
 				addCharacterToList('michael-cousin', 0);
+				addCharacterToList('speedy', 0);
+				addCharacterToList('gotta-drive', 0);
+				
+				driveScenePrecache = new BGSprite('editorial/gotta_drive_cutscene', -615, -125, 1, 1, ['final anim'], true);
+				driveScenePrecache.antialiasing = false;
+				add(driveScenePrecache);
 				outBg = new BGSprite('editorial/hall_door', -615, -125, 1, 1);
 				outBg.antialiasing = false;
 				add(outBg);
@@ -989,6 +999,10 @@ class PlayState extends MusicBeatState
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
 
+		boyfriendBackBod = new Boyfriend(0, 0, 'bf-tcmg-run-bod');
+		startCharacterPos(boyfriendBackBod);
+		boyfriendBackBod.visible = false;
+		boyfriendGroup.add(boyfriendBackBod);
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -5085,24 +5099,41 @@ class PlayState extends MusicBeatState
 						dad.canDance = true;
 					case 664:
 						//this is where drive transition is
+						driveCutty = new FlxSprite();
+						driveCutty.frames = Paths.getSparrowAtlas('editorial/gotta_drive_cutscene');
+						driveCutty.animation.addByPrefix('idle', 'final anim', 24, false);
+						driveCutty.cameras = [camHUD];
+						driveCutty.animation.play('idle');
+						driveCutty.scale.set(2, 2);
+						driveCutty.updateHitbox();
+						driveCutty.screenCenter();
+						driveCutty.scrollFactor.set();
+						add(driveCutty);
+						driveCutty.animation.play('idle', true);
 					case 672:
+						boyfriendBackBod.visible = true;
 						speedyPart = true;
 						dadunce.visible = false;
 						tcmgBg.visible = false;
+						FlxTween.tween(driveCutty, {alpha: 0}, (Conductor.crochet / 1000) * 8);
 						dadGroup.remove(dad);
 						dad = new Character(dad.x, dad.y, 'speedy', false);
 						dadGroup.add(dad);
-						drivey = new Character(dad.x, dad.y, 'gotta-drive');
+						
+						drivey = new Character(dad.x, dad.y, 'gotta-drive', false, false);
 						add(drivey);
+
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg-run', false);
+						boyfriendGroup.add(boyfriend);
+
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
 					case 704:
-						FlxG.camera.flash();
 						drivey.canDance = false;
 						drivey.canSing = false;
 						drivey.playAnim('dancey', true);
 					case 832:
-						FlxG.camera.flash();
 						drivey.canDance = true;
 						drivey.canSing = true;
 						drivey.dance();
@@ -5115,7 +5146,7 @@ class PlayState extends MusicBeatState
 						dad.canDance = true;
 						dad.canSing = true;
 						dadGroup.remove(dad);
-						dad = new Character(drivey.x, drivey.y, 'gotta-drive', false);
+						dad = new Character(drivey.x - dadGroup.x, drivey.y - dadGroup.y, 'gotta-drive', false, false);
 						dadGroup.add(dad);
 						drivey.visible = false;
 						FlxG.camera.flash();
