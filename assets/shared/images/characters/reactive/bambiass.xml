@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="BambiAss.png">
+<SubTexture name="IDLE0000" x="0" y="0" width="92" height="73" frameX="-49" frameY="-56" frameWidth="150" frameHeight="126" />
+<SubTexture name="IDLE0001" x="92" y="0" width="90" height="84" frameX="-49" frameY="-45" frameWidth="150" frameHeight="126" />
+<SubTexture name="IDLE0002" x="182" y="0" width="88" height="87" frameX="-50" frameY="-43" frameWidth="150" frameHeight="126" />
+<SubTexture name="IDLE0003" x="0" y="87" width="88" height="87" frameX="-50" frameY="-43" frameWidth="150" frameHeight="126" />
+<SubTexture name="LEFT0000" x="88" y="87" width="101" height="75" frameX="-37" frameY="-55" frameWidth="150" frameHeight="126" />
+<SubTexture name="LEFT0001" x="189" y="87" width="96" height="83" frameX="-42" frameY="-47" frameWidth="150" frameHeight="126" />
+<SubTexture name="DOWN0000" x="0" y="174" width="96" height="79" frameX="-52" frameY="-53" frameWidth="150" frameHeight="126" />
+<SubTexture name="DOWN0001" x="96" y="174" width="88" height="83" frameX="-55" frameY="-48" frameWidth="150" frameHeight="126" />
+<SubTexture name="UP0000" x="184" y="174" width="82" height="95" frameX="-56" frameY="-31" frameWidth="150" frameHeight="126" />
+<SubTexture name="UP0001" x="0" y="269" width="82" height="94" frameX="-56" frameY="-32" frameWidth="150" frameHeight="126" />
+<SubTexture name="RIGHT0000" x="82" y="269" width="96" height="79" frameX="-63" frameY="-46" frameWidth="150" frameHeight="126" />
+<SubTexture name="RIGHT0001" x="178" y="269" width="99" height="78" frameX="-58" frameY="-47" frameWidth="150" frameHeight="126" />
+<SubTexture name="RIGHT0002" x="0" y="363" width="88" height="82" frameX="-6" frameY="-3" frameWidth="56" frameHeight="47" />
+<SubTexture name="RIGHT0003" x="88" y="363" width="88" height="82" frameX="-6" frameY="-3" frameWidth="56" frameHeight="47" />
+<SubTexture name="RIGHT0004" x="176" y="363" width="88" height="82" frameX="-6" frameY="-3" frameWidth="56" frameHeight="47" />
+</TextureAtlas>

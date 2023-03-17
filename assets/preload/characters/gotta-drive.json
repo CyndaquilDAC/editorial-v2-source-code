@@ -71,7 +71,7 @@
 	"image": "characters/editorial/gotta_drive",
 	"position": [
 		50,
-		360
+		330
 	],
 	"healthicon": "drive",
 	"flip_x": false,
@@ -81,8 +81,8 @@
 		21
 	],
 	"camera_position": [
-		-10,
-		30
+		10,
+		-200
 	],
 	"sing_duration": 4,
 	"scale": 2.2

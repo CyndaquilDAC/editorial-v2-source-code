@@ -7,7 +7,7 @@
 				0
 			],
 			"anim": "danceLeft",
-			"fps": 15,
+			"fps": 24,
 			"name": "IDLELEFT",
 			"indices": []
 		},
@@ -18,18 +18,18 @@
 				0
 			],
 			"anim": "danceRight",
-			"fps": 15,
+			"fps": 24,
 			"name": "IDLERIGHT",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				0
+				-2,
+				2
 			],
 			"anim": "singLEFT",
-			"fps": 15,
+			"fps": 24,
 			"name": "LEFT",
 			"indices": []
 		},
@@ -40,7 +40,7 @@
 				0
 			],
 			"anim": "singDOWN",
-			"fps": 15,
+			"fps": 24,
 			"name": "DOWN",
 			"indices": []
 		},
@@ -48,21 +48,21 @@
 			"loop": false,
 			"offsets": [
 				0,
-				0
+				66
 			],
 			"anim": "singUP",
-			"fps": 15,
+			"fps": 24,
 			"name": "UP",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				0
+				-59,
+				-6
 			],
 			"anim": "singRIGHT",
-			"fps": 15,
+			"fps": 24,
 			"name": "RIGHT",
 			"indices": []
 		}
@@ -70,20 +70,20 @@
 	"no_antialiasing": true,
 	"image": "characters/editorial/pbaldi",
 	"position": [
-		60,
-		100
+		-50,
+		30
 	],
-	"healthicon": "pbaldi",
+	"healthicon": "pbal",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		116,
+		211,
+		116
 	],
 	"camera_position": [
-		-250,
-		-150
+		-270,
+		-240
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4.00000000000001,
 	"scale": 2.2
 }

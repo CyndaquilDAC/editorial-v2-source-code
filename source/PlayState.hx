@@ -5120,7 +5120,7 @@ class PlayState extends MusicBeatState
 						dad = new Character(dad.x, dad.y, 'speedy', false);
 						dadGroup.add(dad);
 						
-						drivey = new Character(dad.x, dad.y, 'gotta-drive', false, false);
+						drivey = new Character(dad.x + 60 + dadGroup.x, dad.y + dadGroup.y - 20, 'gotta-drive', false, false);
 						add(drivey);
 
 						boyfriendGroup.remove(boyfriend);
@@ -5149,6 +5149,35 @@ class PlayState extends MusicBeatState
 						dad = new Character(drivey.x - dadGroup.x, drivey.y - dadGroup.y, 'gotta-drive', false, false);
 						dadGroup.add(dad);
 						drivey.visible = false;
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 1144:
+						bgScroll.animation.pause();
+						boyfriendBackBod.visible = false;
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg-flip', false);
+						boyfriendGroup.add(boyfriend);
+
+						dadGroup.remove(dad);
+						dad = new Character(boyfriend.x + boyfriend.width - 90, 175, 'tcmg-annoyed', false, false);
+						dadGroup.add(dad);
+						drivey.visible = true;
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 1472:
+						bgScroll.visible = false;
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
+						boyfriendGroup.add(boyfriend);
+
+						dadGroup.remove(dad);
+						dad = new Character(-75, 0, 'pbaldi', false, false);
+						dadGroup.add(dad);
+						drivey.visible = false;
+
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
