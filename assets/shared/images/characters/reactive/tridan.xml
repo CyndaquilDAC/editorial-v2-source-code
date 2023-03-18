@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Tridan.png">
+<SubTexture name="IDLE0000" x="0" y="0" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="IDLE0001" x="148" y="0" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="IDLE0002" x="296" y="0" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="IDLE0003" x="0" y="140" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="IDLE0004" x="148" y="140" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="LEFT0000" x="296" y="140" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="LEFT0001" x="0" y="280" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="DOWN0000" x="148" y="280" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="DOWN0001" x="296" y="280" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="UP0000" x="0" y="420" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="UP0001" x="148" y="420" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="RIGHT0000" x="296" y="420" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+<SubTexture name="RIGHT0001" x="0" y="560" width="148" height="140" frameX="0" frameY="0" frameWidth="128" frameHeight="120" />
+</TextureAtlas>

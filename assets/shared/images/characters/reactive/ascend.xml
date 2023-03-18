@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="BfAscend.png">
+<SubTexture name="IDLE0000" x="0" y="0" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+<SubTexture name="IDLE0001" x="76" y="0" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+<SubTexture name="IDLE0002" x="0" y="76" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+<SubTexture name="IDLE0003" x="76" y="0" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+<SubTexture name="MISS0000" x="76" y="76" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+<SubTexture name="MISS0001" x="0" y="152" width="76" height="76" frameX="0" frameY="0" frameWidth="56" frameHeight="56" />
+</TextureAtlas>

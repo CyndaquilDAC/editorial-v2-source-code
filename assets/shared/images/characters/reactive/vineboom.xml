@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dave_vineboom.png">
+	<!-- Created by hand :swag: -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="286" y="10" width="128" height="128"/>
+	<SubTexture name="idle0001" x="148" y="10" width="128" height="128"/>
+	<SubTexture name="idle0002" x="10" y="10" width="128" height="128"/>
+	<SubTexture name="down0000" x="424" y="10" width="128" height="128"/>
+	<SubTexture name="down0001" x="562" y="10" width="128" height="128"/>
+	<SubTexture name="down0002" x="700" y="10" width="128" height="128"/>
+	<SubTexture name="left0000" x="10" y="148" width="128" height="128"/>
+	<SubTexture name="left0001" x="148" y="148" width="128" height="128"/>\
+	<SubTexture name="left0002" x="286" y="148" width="128" height="128"/>
+	<SubTexture name="right0000" x="424" y="148" width="128" height="128"/>
+	<SubTexture name="right0001" x="562" y="148" width="128" height="128"/>
+	<SubTexture name="right0002" x="700" y="148" width="128" height="128"/>
+	<SubTexture name="up0000" x="10" y="286" width="128" height="128"/>
+	<SubTexture name="up0001" x="148" y="286" width="128" height="128"/>
+	<SubTexture name="up0002" x="286" y="286" width="128" height="128"/>
+	<SubTexture name="whaat0000" x="424" y="286" width="128" height="128"/>
+	<SubTexture name="whaat0001" x="562" y="286" width="128" height="128"/>
+	<SubTexture name="whaat0002" x="700" y="286" width="128" height="128"/>
+</TextureAtlas>

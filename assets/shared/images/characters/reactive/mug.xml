@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="MugBambi.png">
+<SubTexture name="IDLE0000" x="0" y="0" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="IDLE0001" x="168" y="0" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="IDLE0002" x="336" y="0" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="IDLE0003" x="504" y="0" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="IDLE0004" x="0" y="168" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="DOWN0000" x="168" y="168" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="DOWN0001" x="336" y="168" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="UP0000" x="504" y="168" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="UP0001" x="0" y="336" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="LEFT0000" x="168" y="336" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="LEFT0001" x="336" y="336" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="RIGHT0000" x="504" y="336" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="RIGHT0001" x="0" y="504" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="ATALK0000" x="168" y="504" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="ATALK0001" x="336" y="504" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="ETALK0000" x="504" y="504" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="ETALK0001" x="0" y="672" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="OTALK0000" x="168" y="672" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+<SubTexture name="OTALK0001" x="336" y="672" width="168" height="168" frameX="0" frameY="0" frameWidth="128" frameHeight="128" />
+</TextureAtlas>

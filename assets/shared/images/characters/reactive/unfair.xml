@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="UnfairTristan.png">
+<SubTexture name="DOWN0000" x="0" y="0" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="DOWN0001" x="147" y="0" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="IDLE0000" x="294" y="0" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="IDLE0001" x="0" y="147" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="IDLE0002" x="147" y="147" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="IDLE0003" x="294" y="147" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="IDLE0004" x="294" y="147" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="RIGHT0000" x="294" y="294" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="RIGHT0001" x="0" y="441" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="UP0000" x="147" y="441" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="UP0001" x="294" y="441" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="LEFT0000" x="0" y="294" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+<SubTexture name="LEFT0001" x="147" y="294" width="147" height="147" frameX="0" frameY="0" frameWidth="127" frameHeight="127" />
+</TextureAtlas>

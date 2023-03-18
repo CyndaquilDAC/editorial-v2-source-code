@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="1000_david_points.png">
+<SubTexture name="down0000" x="0" y="0" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="down0001" x="66" y="0" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="down0002" x="132" y="0" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="idle0000" x="0" y="65" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="idle0001" x="66" y="65" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="idle0002" x="132" y="65" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="left0000" x="0" y="130" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="left0001" x="66" y="130" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="left0002" x="132" y="130" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="right0000" x="0" y="195" width="98" height="74" frameX="0" frameY="-23" frameWidth="92" frameHeight="90" />
+<SubTexture name="right0001" x="98" y="195" width="93" height="74" frameX="0" frameY="-23" frameWidth="92" frameHeight="90" />
+<SubTexture name="right0002" x="191" y="195" width="89" height="74" frameX="0" frameY="-23" frameWidth="92" frameHeight="90" />
+<SubTexture name="up0000" x="0" y="269" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="up0001" x="66" y="269" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+<SubTexture name="up0002" x="132" y="269" width="66" height="65" frameX="0" frameY="0" frameWidth="56" frameHeight="55" />
+</TextureAtlas>
