@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="funny_bambi_emote.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="elar0000" x="60" y="5" width="50" height="50"/>
+	<SubTexture name="elar0001" x="60" y="5" width="50" height="50"/>
+	<SubTexture name="elar0002" x="60" y="60" width="50" height="50"/>
+	<SubTexture name="elar0003" x="60" y="60" width="50" height="50"/>
+	<SubTexture name="elar0004" x="60" y="115" width="50" height="50"/>
+	<SubTexture name="elar0005" x="60" y="115" width="50" height="50"/>
+	<SubTexture name="elar0006" x="60" y="170" width="50" height="50"/>
+	<SubTexture name="elar0007" x="60" y="170" width="50" height="50"/>
+	<SubTexture name="elar0008" x="60" y="170" width="50" height="50"/>
+	<SubTexture name="elar0009" x="60" y="170" width="50" height="50"/>
+	<SubTexture name="elar0010" x="60" y="225" width="50" height="50"/>
+	<SubTexture name="elar0011" x="60" y="225" width="50" height="50"/>
+	<SubTexture name="elar0012" x="60" y="280" width="50" height="50"/>
+	<SubTexture name="elar0013" x="60" y="280" width="50" height="50"/>
+	<SubTexture name="elar0014" x="60" y="335" width="50" height="50"/>
+	<SubTexture name="elar0015" x="60" y="335" width="50" height="50"/>
+	<SubTexture name="elar0016" x="60" y="390" width="50" height="50"/>
+	<SubTexture name="elar0017" x="60" y="390" width="50" height="50"/>
+	<SubTexture name="elar0018" x="60" y="390" width="50" height="50"/>
+	<SubTexture name="elar0019" x="60" y="390" width="50" height="50"/>
+	<SubTexture name="idle0000" x="5" y="5" width="50" height="50"/>
+	<SubTexture name="idle0001" x="5" y="5" width="50" height="50"/>
+	<SubTexture name="idle0002" x="5" y="60" width="50" height="50"/>
+	<SubTexture name="idle0003" x="5" y="60" width="50" height="50"/>
+	<SubTexture name="idle0004" x="5" y="115" width="50" height="50"/>
+	<SubTexture name="idle0005" x="5" y="115" width="50" height="50"/>
+	<SubTexture name="idle0006" x="5" y="170" width="50" height="50"/>
+	<SubTexture name="idle0007" x="5" y="170" width="50" height="50"/>
+	<SubTexture name="idle0008" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="idle0009" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="idle0010" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="idle0011" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="idle0012" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="idle0013" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="spaz0000" x="5" y="280" width="50" height="50"/>
+	<SubTexture name="spaz0001" x="5" y="335" width="50" height="50"/>
+	<SubTexture name="spaz0002" x="5" y="390" width="50" height="50"/>
+	<SubTexture name="spaz0003" x="5" y="445" width="50" height="50"/>
+	<SubTexture name="spin0000" x="5" y="225" width="50" height="50"/>
+	<SubTexture name="spin0001" x="60" y="445" width="50" height="50"/>
+	<SubTexture name="spin0002" x="115" y="5" width="50" height="50"/>
+	<SubTexture name="spin0003" x="115" y="60" width="50" height="50"/>
+	<SubTexture name="spin0004" x="115" y="115" width="50" height="50"/>
+	<SubTexture name="spin0005" x="115" y="170" width="50" height="50"/>
+	<SubTexture name="spin0006" x="115" y="225" width="50" height="50"/>
+	<SubTexture name="spin0007" x="115" y="280" width="50" height="50"/>
+</TextureAtlas>

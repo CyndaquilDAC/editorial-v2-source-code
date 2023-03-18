@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="dave-pullin-the-moves-on-you.png">
+<SubTexture name="first0000" x="0" y="0" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="first0001" x="60" y="0" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="first0002" x="0" y="60" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="second0000" x="60" y="60" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="second0001" x="120" y="0" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="second0002" x="120" y="60" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="fourth0000" x="0" y="120" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="fourth0001" x="60" y="120" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="fourth0002" x="120" y="120" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="five0000" x="180" y="0" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="five0001" x="180" y="60" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+<SubTexture name="five0002" x="180" y="120" width="60" height="60" frameX="0" frameY="0" frameWidth="50" frameHeight="50" />
+</TextureAtlas>
