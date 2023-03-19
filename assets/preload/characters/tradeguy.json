@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-86,
+				467
+			],
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-102,
+				533
+			],
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-59,
+				702
+			],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				-50,
+				538
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LEFT"
+		},
+		{
+			"offsets": [
+				-78,
+				524
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "IDLE"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/editorial/tradeguy",
+	"position": [
+		-100,
+		720
+	],
+	"healthicon": "trade",
+	"flip_x": false,
+	"healthbar_colors": [
+		104,
+		2,
+		1
+	],
+	"camera_position": [
+		-510,
+		-940
+	],
+	"sing_duration": 4,
+	"scale": 4.7
+}
