@@ -15,8 +15,8 @@
 	"no_antialiasing": true,
 	"image": "characters/editorial/bf_run",
 	"position": [
-		-30,
-		40
+		40,
+		110
 	],
 	"healthicon": "tcmgbf",
 	"flip_x": true,
@@ -30,5 +30,5 @@
 		20
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 0.8
 }

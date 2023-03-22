@@ -528,6 +528,9 @@ class PlayState extends MusicBeatState
 				addCharacterToList('michael-cousin', 0);
 				addCharacterToList('speedy', 0);
 				addCharacterToList('gotta-drive', 0);
+				addCharacterToList('tcmg-annoyed', 0);
+				addCharacterToList('pbaldi', 0);
+				addCharacterToList('tradeguy', 0);
 				
 				driveScenePrecache = new BGSprite('editorial/gotta_drive_cutscene', -615, -125, 1, 1, ['final anim'], true);
 				driveScenePrecache.antialiasing = false;
@@ -541,7 +544,7 @@ class PlayState extends MusicBeatState
 				officeBg = new BGSprite('editorial/office', -615, -125, 1, 1);
 				officeBg.antialiasing = false;
 				add(officeBg);
-				bgScroll = new BGSprite('editorial/tcmg_hall', -615, -125, 1, 1, ['idle'], true);
+				bgScroll = new BGSprite('editorial/tcmg_hall', -615 + 185, -125, 1, 1, ['idle'], true);
 				bgScroll.antialiasing = false;
 				add(bgScroll);
 				tcmgBg = new BGSprite('editorial/bg', -615, -125, 1, 1);
@@ -5160,7 +5163,7 @@ class PlayState extends MusicBeatState
 						boyfriendGroup.add(boyfriend);
 
 						dadGroup.remove(dad);
-						dad = new Character(boyfriend.x + boyfriend.width - 90, 175, 'tcmg-annoyed', false, false);
+						dad = new Character(boyfriend.x + boyfriend.width - 70, 135, 'tcmg-annoyed', false, false);
 						dadGroup.add(dad);
 						drivey.visible = true;
 
