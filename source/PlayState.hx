@@ -531,6 +531,7 @@ class PlayState extends MusicBeatState
 				addCharacterToList('tcmg-annoyed', 0);
 				addCharacterToList('pbaldi', 0);
 				addCharacterToList('tradeguy', 0);
+				addCharacterToList('circle', 0);
 				
 				driveScenePrecache = new BGSprite('editorial/gotta_drive_cutscene', -615, -125, 1, 1, ['final anim'], true);
 				driveScenePrecache.antialiasing = false;
@@ -544,7 +545,7 @@ class PlayState extends MusicBeatState
 				officeBg = new BGSprite('editorial/office', -615, -125, 1, 1);
 				officeBg.antialiasing = false;
 				add(officeBg);
-				bgScroll = new BGSprite('editorial/tcmg_hall', -615 + 185, -125, 1, 1, ['idle'], true);
+				bgScroll = new BGSprite('editorial/tcmg_hall', -615 + 200, -125, 1, 1, ['idle'], true);
 				bgScroll.antialiasing = false;
 				add(bgScroll);
 				tcmgBg = new BGSprite('editorial/bg', -615, -125, 1, 1);
@@ -5170,16 +5171,41 @@ class PlayState extends MusicBeatState
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
+					case 1468:
+						dad.canDance = false;
+						dad.canSing = false;
+						dad.playAnim('baldi', true);
 					case 1472:
 						bgScroll.visible = false;
 						boyfriendGroup.remove(boyfriend);
 						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
 						boyfriendGroup.add(boyfriend);
 
+						dad.canDance = true;
+						dad.canSing = true;
+
 						dadGroup.remove(dad);
 						dad = new Character(-75, 0, 'pbaldi', false, false);
 						dadGroup.add(dad);
 						drivey.visible = false;
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 1776:
+						officeBg.visible = false;
+
+						dadGroup.remove(dad);
+						dad = new Character(0, 0, 'tradeguy', false, false);
+						dadGroup.add(dad);
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 2208:
+						dadGroup.remove(dad);
+						dad = new Character(0, 0, 'circle', false, false);
+						dadGroup.add(dad);
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);

@@ -87,9 +87,9 @@
 	"healthicon": "speedy",
 	"flip_x": false,
 	"healthbar_colors": [
-		45,
-		204,
-		77
+		252,
+		222,
+		58
 	],
 	"camera_position": [
 		-170,
