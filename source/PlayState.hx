@@ -5204,7 +5204,7 @@ class PlayState extends MusicBeatState
 						reloadHealthBarColors();
 					case 2208:
 						dadGroup.remove(dad);
-						dad = new Character(0, 0, 'circle', false, false);
+						dad = new Character(-75, 0, 'circle', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
