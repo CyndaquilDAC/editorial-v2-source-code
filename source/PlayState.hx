@@ -5227,17 +5227,17 @@ class PlayState extends MusicBeatState
 						officeBg.visible = false;
 
 						dadGroup.remove(dad);
-						dad = new Character(-115, 175, 'tradeguy', false, false);
+						dad = new Character(-155, 350, 'tradeguy', false, false);
 						dadGroup.add(dad);
 
-						boyfriend.y -= 85;
+						boyfriend.y -= 90;
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
 					case 2208:
 						dadGroup.remove(dad);
-						dad = new Character(-125, 110, 'circle', false, false);
+						dad = new Character(-165, 145, 'circle', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
@@ -5246,7 +5246,7 @@ class PlayState extends MusicBeatState
 					case 2592:
 						cafeBg.visible = false;
 						dadGroup.remove(dad);
-						dad = new Character(-25, 175, 'little-johnny', false, false);
+						dad = new Character(-75, 130, 'little-johnny', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
@@ -5254,18 +5254,18 @@ class PlayState extends MusicBeatState
 						reloadHealthBarColors();
 					case 2832:
 						dadGroup.remove(dad);
-						dad = new Character(-145, 125, 'loudguy', false, false);
+						dad = new Character(-100, 185, 'loudguy', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
 					case 3212:
-						FlxTween.tween(dad, {x: dad.x - 1280}, Conductor.crochet / 250, {ease: FlxEase.circOut});
+						FlxTween.tween(dad, {x: dad.x - 1280}, Conductor.crochet / 250, {ease: FlxEase.backIn});
 					case 3216:
 						FlxTween.cancelTweensOf(dad);
 						dadGroup.remove(dad);
-						dad = new Character(0, 0, 'moneyguy', false, false);
+						dad = new Character(boyfriend.x + boyfriend.width + 235, 0, 'moneyguy', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 0;
 						boyfriendGroup.remove(boyfriend);
@@ -5283,11 +5283,11 @@ class PlayState extends MusicBeatState
 						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
 						boyfriendGroup.add(boyfriend);
 						dadGroup.remove(dad);
-						dad = new Character(0, 0, 'tcmg-mad', false, false);
+						dad = new Character(-125, 65, 'tcmg-mad', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 1;
 						dad.x -= 1280;
-						FlxTween.tween(dad, {x: dad.x + 1280}, (Conductor.crochet / 250) * 2, {ease: FlxEase.backIn});
+						FlxTween.tween(dad, {x: dad.x + 1280}, (Conductor.crochet / 250), {ease: FlxEase.backOut});
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
@@ -5308,8 +5308,16 @@ class PlayState extends MusicBeatState
 						dadGroup.scrollFactor.set();
 						boyfriendGroup.setPosition(0, 0);
 						boyfriendGroup.scrollFactor.set();
+						for(i in opponentStrums.members)
+						{
+							FlxTween.tween(i, {x: i.x - 575}, 1, {ease: FlxEase.circOut});
+						}
 					case 3976:
 						FlxTween.tween(blackCover, {alpha: 0}, (Conductor.crochet / 250) * 2);
+						for(i in playerStrums.members)
+						{
+							FlxTween.tween(i, {x: i.x + -320}, (Conductor.crochet / 250), {ease: FlxEase.circOut});
+						}
 					case 3984:
 						FlxG.camera.flash();
 					case 4248:
