@@ -2,99 +2,88 @@
 	"animations": [
 		{
 			"offsets": [
-				-29,
-				-2
+				0,
+				0
 			],
 			"loop": false,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "LEFT",
+			"fps": 24,
+			"name": "left",
 			"indices": []
 		},
 		{
 			"offsets": [
-				20,
-				30
+				0,
+				0
 			],
 			"loop": false,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "DOWN",
+			"fps": 24,
+			"name": "down",
 			"indices": []
 		},
 		{
 			"offsets": [
-				30,
-				-30
+				0,
+				0
 			],
 			"loop": false,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "UP",
+			"fps": 24,
+			"name": "up",
 			"indices": []
 		},
 		{
 			"offsets": [
-				60,
-				-20
+				0,
+				0
 			],
 			"loop": false,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "RIGHT",
+			"fps": 24,
+			"name": "right",
 			"indices": []
 		},
 		{
 			"offsets": [
-				20,
-				-20
+				0,
+				0
 			],
 			"loop": false,
 			"anim": "idle",
-			"fps": 12,
-			"name": "IDLE",
+			"fps": 0,
+			"name": "idle",
 			"indices": []
 		},
 		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "wave",
 			"loop": true,
-			"offsets": [
-				-30,
-				-2
-			],
-			"anim": "talk",
-			"fps": 12,
-			"name": "TALK",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				1100,
-				-210
-			],
-			"anim": "fall",
-			"fps": 12,
-			"name": "deafht :sob;",
-			"indices": []
+			"name": "wave"
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/editorial/speedy",
+	"image": "characters/editorial/tcmg_finale",
 	"position": [
-		-160,
-		30
+		0,
+		0
 	],
-	"healthicon": "speedy",
+	"healthicon": "tcmg",
 	"flip_x": false,
 	"healthbar_colors": [
-		252,
-		222,
-		58
+		45,
+		204,
+		77
 	],
 	"camera_position": [
-		-170,
-		-40
+		-500,
+		60
 	],
 	"sing_duration": 4,
-	"scale": 2.2
+	"scale": 1
 }

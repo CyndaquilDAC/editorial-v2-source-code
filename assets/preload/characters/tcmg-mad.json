@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				-29,
-				-2
+				145,
+				522
 			],
 			"loop": false,
 			"anim": "singLEFT",
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				20,
-				30
+				-76,
+				524
 			],
 			"loop": false,
 			"anim": "singDOWN",
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				30,
-				-30
+				-80,
+				522
 			],
 			"loop": false,
 			"anim": "singUP",
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				60,
-				-20
+				-80,
+				524
 			],
 			"loop": false,
 			"anim": "singRIGHT",
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				20,
-				-20
+				-78,
+				524
 			],
 			"loop": false,
 			"anim": "idle",
@@ -56,44 +56,55 @@
 			"indices": []
 		},
 		{
+			"offsets": [
+				-78,
+				524
+			],
+			"loop": false,
+			"anim": "pullphone",
+			"fps": 12,
+			"name": "PHONESTART",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-78,
+				526
+			],
+			"loop": false,
+			"anim": "usephone",
+			"fps": 12,
+			"name": "PHONEEND",
+			"indices": []
+		},
+		{
 			"loop": true,
 			"offsets": [
-				-30,
-				-2
+				-79,
+				524
 			],
 			"anim": "talk",
 			"fps": 12,
 			"name": "TALK",
 			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				1100,
-				-210
-			],
-			"anim": "fall",
-			"fps": 12,
-			"name": "deafht :sob;",
-			"indices": []
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/editorial/speedy",
+	"image": "characters/editorial/tcmg",
 	"position": [
-		-160,
-		30
+		-180,
+		330
 	],
-	"healthicon": "speedy",
+	"healthicon": "tcmg",
 	"flip_x": false,
 	"healthbar_colors": [
-		252,
-		222,
-		58
+		45,
+		204,
+		77
 	],
 	"camera_position": [
 		-170,
-		-40
+		-630
 	],
 	"sing_duration": 4,
 	"scale": 2.2

@@ -324,7 +324,7 @@ class Character extends FlxSprite
 	/**
 	 * FOR GF DANCING SHIT
 	 */
-	public function dance()
+	public function dance(frameToStart:Int = 0)
 	{
 		if (!debugMode && !skipDance && !specialAnim && canDance)
 		{
@@ -333,12 +333,12 @@ class Character extends FlxSprite
 				danced = !danced;
 
 				if (danced)
-					playAnim('danceRight' + idleSuffix);
+					playAnim('danceRight' + idleSuffix, true, false, frameToStart);
 				else
-					playAnim('danceLeft' + idleSuffix);
+					playAnim('danceLeft' + idleSuffix, true, false, frameToStart);
 			}
 			else if(animation.getByName('idle' + idleSuffix) != null) {
-					playAnim('idle' + idleSuffix);
+					playAnim('idle' + idleSuffix, true, false, frameToStart);
 			}
 		}
 	}

@@ -79,6 +79,8 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
+	var tcmgFinaleIdle:Int = 0;
+
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -337,6 +339,8 @@ class PlayState extends MusicBeatState
 	var driveCutty:FlxSprite;
 
 	var boyfriendBackBod:Boyfriend;
+	
+	var blackCover:FlxSprite;
 
 	override public function create()
 	{
@@ -532,11 +536,24 @@ class PlayState extends MusicBeatState
 				addCharacterToList('pbaldi', 0);
 				addCharacterToList('tradeguy', 0);
 				addCharacterToList('circle', 0);
+				addCharacterToList('little-johnny', 0);
+				addCharacterToList('loudguy', 0);
+				addCharacterToList('moneyguy', 0);
+				addCharacterToList('tcmg-mad', 0);
+				addCharacterToList('tcmg-finale', 0);
+				addCharacterToList('tcmg-bf-finale', 1);
 				
 				driveScenePrecache = new BGSprite('editorial/gotta_drive_cutscene', -615, -125, 1, 1, ['final anim'], true);
 				driveScenePrecache.antialiasing = false;
 				add(driveScenePrecache);
-				outBg = new BGSprite('editorial/hall_door', -615, -125, 1, 1);
+				var whiteBg:FlxSprite = new FlxSprite().makeGraphic(1280, 720, FlxColor.WHITE);
+				whiteBg.scrollFactor.set();
+				add(whiteBg);
+				var winBoard = new BGSprite('editorial/winboard', 0, 0, 1, 1);
+				winBoard.antialiasing = false;
+				winBoard.scrollFactor.set();
+				add(winBoard);
+				outBg = new BGSprite('editorial/hall_door', -615 + 185, -125, 1, 1);
 				outBg.antialiasing = false;
 				add(outBg);
 				cafeBg = new BGSprite('editorial/cafe', -615, -125, 1, 1);
@@ -545,12 +562,18 @@ class PlayState extends MusicBeatState
 				officeBg = new BGSprite('editorial/office', -615, -125, 1, 1);
 				officeBg.antialiasing = false;
 				add(officeBg);
-				bgScroll = new BGSprite('editorial/tcmg_hall', -615 + 200, -125, 1, 1, ['idle'], true);
+				bgScroll = new BGSprite('editorial/tcmg_hall', -615 + 275, -125, 1, 1, ['idle'], true);
 				bgScroll.antialiasing = false;
 				add(bgScroll);
 				tcmgBg = new BGSprite('editorial/bg', -615, -125, 1, 1);
 				tcmgBg.antialiasing = false;
 				add(tcmgBg);
+
+				blackCover = new FlxSprite().makeGraphic(1280, 720, FlxColor.BLACK);
+				blackCover.scrollFactor.set();
+				blackCover.cameras = [camHUD];
+				add(blackCover);
+				blackCover.alpha = 0;
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -2133,7 +2156,7 @@ class PlayState extends MusicBeatState
 				}
 				if (tmr.loopsLeft % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 				{
-					dad.dance();
+					dad.dance(tcmgFinaleIdle);
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -4605,7 +4628,7 @@ class PlayState extends MusicBeatState
 				{
 					char = drivey;
 				}
-				altAnim = '';
+				//altAnim = '';
 			}
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
 			if(note.gfNote) {
@@ -5031,6 +5054,14 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
+		if(curBeat % 8 == 0)
+		{
+			if(dad != null && dad.curCharacter == 'tcmg-finale')
+			{
+				tcmgFinaleIdle = FlxG.random.int(0, 3);
+			}
+		}
+
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 		{
 			gf.dance();
@@ -5041,7 +5072,7 @@ class PlayState extends MusicBeatState
 		}
 		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 		{
-			dad.dance();
+			dad.dance(tcmgFinaleIdle);
 		}
 		if(drivey != null)
 		{
@@ -5076,7 +5107,7 @@ class PlayState extends MusicBeatState
 					case 340:
 						dad.canDance = true;
 						dad.canSing = true;
-						dadunce = new FlxSprite(dad.x, dad.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
+						dadunce = new FlxSprite(dad.x - dadGroup.x, dad.y - dadGroup.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
 						dadunce.scale.set(2.2, 2.2);
 						//dadunce.updateHitbox();
 						//dadunce.setPosition(dad.x, dad.y);
@@ -5185,7 +5216,7 @@ class PlayState extends MusicBeatState
 						dad.canSing = true;
 
 						dadGroup.remove(dad);
-						dad = new Character(-75, 0, 'pbaldi', false, false);
+						dad = new Character(-100, 5, 'pbaldi', false, false);
 						dadGroup.add(dad);
 						drivey.visible = false;
 
@@ -5196,20 +5227,96 @@ class PlayState extends MusicBeatState
 						officeBg.visible = false;
 
 						dadGroup.remove(dad);
-						dad = new Character(0, 0, 'tradeguy', false, false);
+						dad = new Character(-115, 175, 'tradeguy', false, false);
 						dadGroup.add(dad);
+
+						boyfriend.y -= 85;
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
 					case 2208:
 						dadGroup.remove(dad);
-						dad = new Character(-75, 0, 'circle', false, false);
+						dad = new Character(-125, 110, 'circle', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
+					case 2592:
+						cafeBg.visible = false;
+						dadGroup.remove(dad);
+						dad = new Character(-25, 175, 'little-johnny', false, false);
+						dadGroup.add(dad);
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 2832:
+						dadGroup.remove(dad);
+						dad = new Character(-145, 125, 'loudguy', false, false);
+						dadGroup.add(dad);
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 3212:
+						FlxTween.tween(dad, {x: dad.x - 1280}, Conductor.crochet / 250, {ease: FlxEase.circOut});
+					case 3216:
+						FlxTween.cancelTweensOf(dad);
+						dadGroup.remove(dad);
+						dad = new Character(0, 0, 'moneyguy', false, false);
+						dadGroup.add(dad);
+						dad.alpha = 0;
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg-flip', false);
+						boyfriendGroup.add(boyfriend);
+						FlxTween.tween(dad, {alpha: 1}, 5);
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 3632:
+						FlxTween.tween(dad, {alpha: 0}, (Conductor.crochet / 250) * 2);
+					case 3640:
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
+						boyfriendGroup.add(boyfriend);
+						dadGroup.remove(dad);
+						dad = new Character(0, 0, 'tcmg-mad', false, false);
+						dadGroup.add(dad);
+						dad.alpha = 1;
+						dad.x -= 1280;
+						FlxTween.tween(dad, {x: dad.x + 1280}, (Conductor.crochet / 250) * 2, {ease: FlxEase.backIn});
+
+						FlxG.camera.flash();
+						iconP2.changeIcon(dad.healthIcon);
+						reloadHealthBarColors();
+					case 3968:
+						defaultCamZoom = 1;
+						blackCover.alpha = 1;
+						outBg.visible = false;
+						dadGroup.remove(dad);
+						dad = new Character(569, 0, 'tcmg-finale', false, false);
+						dad.scrollFactor.set();
+						dadGroup.add(dad);
+						boyfriendGroup.remove(boyfriend);
+						boyfriend = new Boyfriend(1060, 35, 'bf-tcmg-finale', false);
+						boyfriend.scrollFactor.set();
+						boyfriendGroup.add(boyfriend);
+						dadGroup.setPosition(0, 0);
+						dadGroup.scrollFactor.set();
+						boyfriendGroup.setPosition(0, 0);
+						boyfriendGroup.scrollFactor.set();
+					case 3976:
+						FlxTween.tween(blackCover, {alpha: 0}, (Conductor.crochet / 250) * 2);
+					case 3984:
+						FlxG.camera.flash();
+					case 4248:
+						FlxG.camera.flash();
+						dad.canDance = false;
+						dad.canSing = false;
+						dad.playAnim('wave', true);
 				}
 		}
 		switch (curStage)
