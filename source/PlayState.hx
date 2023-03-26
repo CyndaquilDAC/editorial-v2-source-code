@@ -5256,7 +5256,7 @@ class PlayState extends MusicBeatState
 						dad.canDance = false;
 						dad.canSing = false;
 						dad.playAnim('transOne', true);
-					case 2828:
+					case 2829:
 						dad.playAnim('transTwo', true);
 					case 2832:
 						dad.canDance = true;
@@ -5267,7 +5267,7 @@ class PlayState extends MusicBeatState
 
 						var sploder:FlxSprite = new FlxSprite();
 						sploder.frames = Paths.getSparrowAtlas('editorial/splode');
-						sploder.animation.addByPrefix('idle', 'SPLODE', 24, false);
+						sploder.animation.addByPrefix('idle', 'SPLODE', 12, false);
 						sploder.animation.play('idle', true);
 						sploder.scale.set(3, 3);
 						sploder.updateHitbox();
@@ -5275,6 +5275,10 @@ class PlayState extends MusicBeatState
 						sploder.scrollFactor.set();
 						add(sploder);
 						sploder.animation.play('idle', true);
+						sploder.animation.finishCallback = function(heyPrettyLady:String)
+						{
+							sploder.destroy();
+						}
 
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
