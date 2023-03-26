@@ -5107,7 +5107,7 @@ class PlayState extends MusicBeatState
 					case 340:
 						dad.canDance = true;
 						dad.canSing = true;
-						dadunce = new FlxSprite(dad.x - dadGroup.x, dad.y - dadGroup.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
+						dadunce = new FlxSprite((dad.x - 15) - dadGroup.x, (dad.y + 45) - dadGroup.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
 						dadunce.scale.set(2.2, 2.2);
 						//dadunce.updateHitbox();
 						//dadunce.setPosition(dad.x, dad.y);
@@ -5227,7 +5227,7 @@ class PlayState extends MusicBeatState
 						officeBg.visible = false;
 
 						dadGroup.remove(dad);
-						dad = new Character(-175, 385, 'tradeguy', false, false);
+						dad = new Character(-175, 585, 'tradeguy', false, false);
 						dadGroup.add(dad);
 
 						boyfriend.y -= 90;
@@ -5246,7 +5246,7 @@ class PlayState extends MusicBeatState
 					case 2592:
 						cafeBg.visible = false;
 						dadGroup.remove(dad);
-						dad = new Character(-75, 130, 'little-johnny', false, false);
+						dad = new Character(-125, 220, 'little-johnny', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();

@@ -1,78 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				10,
+				20
 			],
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "left"
-		},
-		{
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
+			"fps": 12,
+			"name": "DOWN",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				8,
+				26
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
+			"fps": 12,
+			"name": "UP",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				6,
+				26
 			],
-			"fps": 24,
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				-2,
+				23
+			],
+			"indices": [],
+			"fps": 12,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "right"
+			"loop": false,
+			"name": "LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 0,
-			"anim": "idle",
 			"indices": [],
-			"name": "idle"
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "IDLE"
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/editorial/loud",
+	"image": "characters/editorial/money",
 	"position": [
-		0,
-		0
+		10,
+		70
 	],
 	"healthicon": "money",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		251,
 		146,
 		66
 	],
 	"camera_position": [
-		0,
-		0
+		-900,
+		-120
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 3.3
 }
