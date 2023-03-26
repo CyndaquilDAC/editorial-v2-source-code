@@ -5195,7 +5195,7 @@ class PlayState extends MusicBeatState
 						boyfriendGroup.add(boyfriend);
 
 						dadGroup.remove(dad);
-						dad = new Character(boyfriend.x + boyfriend.width - 70, 135, 'tcmg-annoyed', false, false);
+						dad = new Character(boyfriend.x + boyfriend.width - 25, 90, 'tcmg-annoyed', false, false);
 						dadGroup.add(dad);
 						drivey.visible = true;
 
@@ -5227,7 +5227,7 @@ class PlayState extends MusicBeatState
 						officeBg.visible = false;
 
 						dadGroup.remove(dad);
-						dad = new Character(-155, 350, 'tradeguy', false, false);
+						dad = new Character(-175, 385, 'tradeguy', false, false);
 						dadGroup.add(dad);
 
 						boyfriend.y -= 90;
@@ -5237,7 +5237,7 @@ class PlayState extends MusicBeatState
 						reloadHealthBarColors();
 					case 2208:
 						dadGroup.remove(dad);
-						dad = new Character(-165, 145, 'circle', false, false);
+						dad = new Character(-170, 160, 'circle', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
@@ -5252,12 +5252,30 @@ class PlayState extends MusicBeatState
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
+					case 2816:
+						dad.canDance = false;
+						dad.canSing = false;
+						dad.playAnim('transOne', true);
+					case 2828:
+						dad.playAnim('transTwo', true);
 					case 2832:
+						dad.canDance = true;
+						dad.canSing = true;
 						dadGroup.remove(dad);
 						dad = new Character(-100, 185, 'loudguy', false, false);
 						dadGroup.add(dad);
 
-						FlxG.camera.flash();
+						var sploder:FlxSprite = new FlxSprite();
+						sploder.frames = Paths.getSparrowAtlas('editorial/splode');
+						sploder.animation.addByPrefix('idle', 'SPLODE', 24, false);
+						sploder.animation.play('idle', true);
+						sploder.scale.set(3, 3);
+						sploder.updateHitbox();
+						sploder.screenCenter();
+						sploder.scrollFactor.set();
+						add(sploder);
+						sploder.animation.play('idle', true);
+
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
 					case 3212:
@@ -5265,7 +5283,7 @@ class PlayState extends MusicBeatState
 					case 3216:
 						FlxTween.cancelTweensOf(dad);
 						dadGroup.remove(dad);
-						dad = new Character(boyfriend.x + boyfriend.width + 235, 0, 'moneyguy', false, false);
+						dad = new Character(boyfriend.x + boyfriend.width + 145, 0, 'moneyguy', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 0;
 						boyfriendGroup.remove(boyfriend);

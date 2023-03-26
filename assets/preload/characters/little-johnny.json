@@ -51,6 +51,28 @@
 			],
 			"indices": [],
 			"fps": 12,
+			"anim": "transOne",
+			"loop": false,
+			"name": "jumpscare"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "transTwo",
+			"loop": false,
+			"name": "kick"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
 			"anim": "idle",
 			"loop": false,
 			"name": "idle"
