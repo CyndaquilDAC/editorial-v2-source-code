@@ -1,92 +1,125 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				145,
 				522
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 12,
-			"name": "LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LEFT"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-76,
 				524
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 12,
-			"name": "DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-80,
 				522
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 12,
-			"name": "UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-80,
 				524
 			],
-			"loop": false,
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "RIGHT",
-			"indices": []
+			"indices": [],
+			"name": "RIGHT"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-78,
 				524
 			],
-			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "IDLE",
-			"indices": []
+			"indices": [],
+			"name": "IDLE"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-78,
 				524
 			],
-			"loop": false,
+			"fps": 12,
 			"anim": "pullphone",
-			"fps": 12,
-			"name": "PHONESTART",
-			"indices": []
+			"indices": [],
+			"name": "PHONESTART"
 		},
 		{
-			"offsets": [
-				-78,
-				526
-			],
 			"loop": false,
-			"anim": "usephone",
+			"offsets": [
+				351,
+				680
+			],
 			"fps": 12,
-			"name": "PHONEEND",
-			"indices": []
+			"anim": "usephone",
+			"indices": [],
+			"name": "PHONEJUMP"
 		},
 		{
-			"loop": true,
+			"loop": false,
+			"offsets": [
+				351,
+				680
+			],
+			"fps": 12,
+			"anim": "phonespawn",
+			"indices": [],
+			"name": "JUMPSCAREAAH"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				351,
+				680
+			],
+			"fps": 12,
+			"anim": "wee",
+			"indices": [],
+			"name": "WEE"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				351,
+				680
+			],
+			"fps": 12,
+			"anim": "wtf",
+			"indices": [],
+			"name": "WHATTHEFUCK"
+		},
+		{
 			"offsets": [
 				-79,
 				524
 			],
-			"anim": "talk",
+			"loop": true,
 			"fps": 12,
-			"name": "TALK",
-			"indices": []
+			"anim": "talk",
+			"indices": [],
+			"name": "TALK"
 		}
 	],
 	"no_antialiasing": true,

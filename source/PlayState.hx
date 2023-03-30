@@ -569,6 +569,12 @@ class PlayState extends MusicBeatState
 				tcmgBg.antialiasing = false;
 				add(tcmgBg);
 
+				dadunce = new FlxSprite().loadGraphic(Paths.image('editorial/sad_tcmg'));
+				dadunce.scale.set(2.2, 2.2);
+				dadunce.antialiasing = false;
+				add(dadunce);
+				dadunce.visible = false;
+
 				blackCover = new FlxSprite().makeGraphic(1280, 720, FlxColor.BLACK);
 				blackCover.scrollFactor.set();
 				blackCover.cameras = [camHUD];
@@ -4041,15 +4047,27 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				trace('WENT BACK TO FREEPLAY??');
-				WeekData.loadTheFirstEnabledMod();
-				cancelMusicFadeTween();
-				if(FlxTransitionableState.skipNextTransIn) {
-					CustomFadeTransition.nextCamera = null;
+				if(SONG.song.toLowerCase() == 'editorial')
+				{
+					cancelMusicFadeTween();
+					if(FlxTransitionableState.skipNextTransIn) {
+						CustomFadeTransition.nextCamera = null;
+					}
+					MusicBeatState.switchState(new EditorialEndingState());
+					changedDifficulty = false;
 				}
-				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
-				changedDifficulty = false;
+				else
+				{
+					trace('WENT BACK TO FREEPLAY??');
+					WeekData.loadTheFirstEnabledMod();
+					cancelMusicFadeTween();
+					if(FlxTransitionableState.skipNextTransIn) {
+						CustomFadeTransition.nextCamera = null;
+					}
+					MusicBeatState.switchState(new FreeplayState());
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					changedDifficulty = false;
+				}
 			}
 			transitioning = true;
 		}
@@ -4637,7 +4655,19 @@ class PlayState extends MusicBeatState
 
 			if(char != null)
 			{
-				char.playAnim(animToPlay, true);
+				var startFrame:Int = 0;
+				if(note.isSustainNote)
+				{
+					if(char.curCharacter == 'tcmg-mad')
+					{
+						startFrame = 3;
+					}
+					else if(char.curCharacter == 'tcmg-annoyed' || char.curCharacter == 'little-johnny' || char.curCharacter == 'tradeguy')
+					{
+						startFrame = 1;
+					}
+				}
+				char.playAnim(animToPlay, true, false, startFrame);
 				char.holdTimer = 0;
 			}
 		}
@@ -5104,19 +5134,20 @@ class PlayState extends MusicBeatState
 						dad.canSing = false;
 					case 324:
 						dad.playAnim('usephone', true);
+					case 328:
+						dad.playAnim('phonespawn', true);
+					case 332:
+						dad.playAnim('wee', true);
+					case 336:
+						dad.playAnim('wtf', true);
 					case 340:
 						dad.canDance = true;
 						dad.canSing = true;
-						dadunce = new FlxSprite((dad.x - 15) - dadGroup.x, (dad.y + 45) - dadGroup.y).loadGraphic(Paths.image('editorial/sad_tcmg'));
-						dadunce.scale.set(2.2, 2.2);
-						//dadunce.updateHitbox();
-						//dadunce.setPosition(dad.x, dad.y);
-						dadunce.antialiasing = false;
-						add(dadunce);
+						dadunce.setPosition((dad.x + 5) - dadGroup.x, (dad.y + 220) - dadGroup.y);
+						dadunce.visible = true;
 						dadGroup.remove(dad);
 						dad = new Character(-150, -80, 'michael-cousin', false);
 						dadGroup.add(dad);
-						addBehindDad(dadunce);
 						FlxG.camera.flash();
 						iconP2.changeIcon(dad.healthIcon);
 						reloadHealthBarColors();
@@ -5246,7 +5277,7 @@ class PlayState extends MusicBeatState
 					case 2592:
 						cafeBg.visible = false;
 						dadGroup.remove(dad);
-						dad = new Character(-125, 220 + 50, 'little-johnny', false, false);
+						dad = new Character(-125, 220 + 125, 'little-johnny', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
@@ -5262,7 +5293,7 @@ class PlayState extends MusicBeatState
 						dad.canDance = true;
 						dad.canSing = true;
 						dadGroup.remove(dad);
-						dad = new Character(-100, 185 + 35, 'loudguy', false, false);
+						dad = new Character(-100, 185 + 120, 'loudguy', false, false);
 						dadGroup.add(dad);
 
 						var sploder:FlxSprite = new FlxSprite();
@@ -5287,7 +5318,7 @@ class PlayState extends MusicBeatState
 					case 3216:
 						FlxTween.cancelTweensOf(dad);
 						dadGroup.remove(dad);
-						dad = new Character(boyfriend.x + boyfriend.width + 145, 0, 'moneyguy', false, false);
+						dad = new Character(boyfriend.x + boyfriend.width + 145, 5, 'moneyguy', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 0;
 						boyfriendGroup.remove(boyfriend);
@@ -5305,10 +5336,11 @@ class PlayState extends MusicBeatState
 						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
 						boyfriendGroup.add(boyfriend);
 						dadGroup.remove(dad);
-						dad = new Character(-355, 50, 'tcmg-mad', false, false);
+						dad = new Character(-525, 30, 'tcmg-mad', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 1;
 						dad.x -= 1280;
+						dad.danceEveryNumBeats = 2;
 						FlxTween.tween(dad, {x: dad.x + 1280}, (Conductor.crochet / 250), {ease: FlxEase.backOut});
 
 						FlxG.camera.flash();
