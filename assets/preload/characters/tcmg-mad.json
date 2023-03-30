@@ -2,98 +2,76 @@
 	"animations": [
 		{
 			"offsets": [
-				145,
-				522
+				-358,
+				-207
 			],
 			"loop": false,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "LEFT",
+			"fps": 24,
+			"name": "left",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-76,
-				524
+				-787,
+				-110
 			],
 			"loop": false,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "DOWN",
+			"fps": 24,
+			"name": "down",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-80,
-				522
+				-690,
+				273
 			],
 			"loop": false,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "UP",
+			"fps": 24,
+			"name": "up",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-80,
-				524
+				-708,
+				-42
 			],
 			"loop": false,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "RIGHT",
+			"fps": 24,
+			"name": "right",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-78,
-				524
+				0,
+				0
 			],
 			"loop": false,
-			"anim": "idle",
-			"fps": 12,
-			"name": "IDLE",
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "idleLeft",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-78,
-				524
+				0,
+				0
 			],
 			"loop": false,
-			"anim": "pullphone",
-			"fps": 12,
-			"name": "PHONESTART",
-			"indices": []
-		},
-		{
-			"offsets": [
-				-78,
-				526
-			],
-			"loop": false,
-			"anim": "usephone",
-			"fps": 12,
-			"name": "PHONEEND",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				-79,
-				524
-			],
-			"anim": "talk",
-			"fps": 12,
-			"name": "TALK",
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "idleRight",
 			"indices": []
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/editorial/tcmg",
+	"image": "characters/editorial/tcmg_angry",
 	"position": [
-		-180,
-		330
+		-610,
+		60
 	],
 	"healthicon": "tcmg",
 	"flip_x": false,
@@ -103,8 +81,8 @@
 		77
 	],
 	"camera_position": [
-		-170,
-		-630
+		500,
+		-310
 	],
 	"sing_duration": 4,
 	"scale": 2.2

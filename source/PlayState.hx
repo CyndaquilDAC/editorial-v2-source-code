@@ -5246,7 +5246,7 @@ class PlayState extends MusicBeatState
 					case 2592:
 						cafeBg.visible = false;
 						dadGroup.remove(dad);
-						dad = new Character(-125, 220, 'little-johnny', false, false);
+						dad = new Character(-125, 220 + 50, 'little-johnny', false, false);
 						dadGroup.add(dad);
 
 						FlxG.camera.flash();
@@ -5262,12 +5262,12 @@ class PlayState extends MusicBeatState
 						dad.canDance = true;
 						dad.canSing = true;
 						dadGroup.remove(dad);
-						dad = new Character(-100, 185, 'loudguy', false, false);
+						dad = new Character(-100, 185 + 35, 'loudguy', false, false);
 						dadGroup.add(dad);
 
 						var sploder:FlxSprite = new FlxSprite();
 						sploder.frames = Paths.getSparrowAtlas('editorial/splode');
-						sploder.animation.addByPrefix('idle', 'SPLODE', 12, false);
+						sploder.animation.addByPrefix('idle', 'SPLODE', 24, false);
 						sploder.animation.play('idle', true);
 						sploder.scale.set(3, 3);
 						sploder.updateHitbox();
@@ -5305,7 +5305,7 @@ class PlayState extends MusicBeatState
 						boyfriend = new Boyfriend(boyfriend.x, boyfriend.y, 'bf-tcmg', false);
 						boyfriendGroup.add(boyfriend);
 						dadGroup.remove(dad);
-						dad = new Character(-125, 65, 'tcmg-mad', false, false);
+						dad = new Character(-355, 50, 'tcmg-mad', false, false);
 						dadGroup.add(dad);
 						dad.alpha = 1;
 						dad.x -= 1280;
