@@ -20,6 +20,7 @@ class EditorialEndingState extends MusicBeatState
 		add(bg);
 
 		winScreen = new FlxSprite().loadGraphic(Paths.image('editorial/ending'));
+		winScreen.screenCenter();
 		add(winScreen);
 
 		var textington:FlxSprite = new FlxSprite().loadGraphic(Paths.image('editorial/congration'));
