@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sticky_unlikely_rivals.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="2021" y="5" width="652" height="560"/>
+	<SubTexture name="down0001" x="2021" y="5" width="652" height="560"/>
+	<SubTexture name="down0002" x="2678" y="5" width="652" height="560"/>
+	<SubTexture name="down0003" x="2678" y="5" width="652" height="560"/>
+	<SubTexture name="down0004" x="3335" y="5" width="652" height="560"/>
+	<SubTexture name="down0005" x="3335" y="5" width="652" height="560"/>
+	<SubTexture name="idle0000" x="5" y="1144" width="560" height="560"/>
+	<SubTexture name="left0000" x="5" y="5" width="667" height="560"/>
+	<SubTexture name="left0001" x="5" y="5" width="667" height="560"/>
+	<SubTexture name="left0002" x="677" y="5" width="667" height="560"/>
+	<SubTexture name="left0003" x="677" y="5" width="667" height="560"/>
+	<SubTexture name="left0004" x="1349" y="5" width="667" height="560"/>
+	<SubTexture name="left0005" x="1349" y="5" width="667" height="560"/>
+	<SubTexture name="right0000" x="5" y="570" width="624" height="569"/>
+	<SubTexture name="right0001" x="5" y="570" width="624" height="569"/>
+	<SubTexture name="right0002" x="634" y="570" width="624" height="569"/>
+	<SubTexture name="right0003" x="634" y="570" width="624" height="569"/>
+	<SubTexture name="right0004" x="1263" y="570" width="624" height="569"/>
+	<SubTexture name="right0005" x="1263" y="570" width="624" height="569"/>
+	<SubTexture name="up0000" x="1892" y="570" width="560" height="608"/>
+	<SubTexture name="up0001" x="1892" y="570" width="560" height="608"/>
+	<SubTexture name="up0002" x="2457" y="570" width="560" height="608"/>
+	<SubTexture name="up0003" x="2457" y="570" width="560" height="608"/>
+	<SubTexture name="up0004" x="3022" y="570" width="560" height="608"/>
+	<SubTexture name="up0005" x="3022" y="570" width="560" height="608"/>
+</TextureAtlas>

@@ -580,6 +580,9 @@ class PlayState extends MusicBeatState
 				blackCover.cameras = [camHUD];
 				add(blackCover);
 				blackCover.alpha = 0;
+			case 'gb':
+				var bg:BGSprite = new BGSprite('gb', -633, -29, 1, 1);
+				add(bg);
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
